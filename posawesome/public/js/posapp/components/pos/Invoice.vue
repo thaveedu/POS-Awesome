@@ -27,14 +27,19 @@
             <template v-slot:item.amount="{ item }">{{
               formtCurrency(item.qty * item.rate)
             }}</template>
+            <template v-slot:item.actions="{ item }">
+              <v-btn icon color="red" @click.stop="remove_item(item)">
+                      <v-icon>mdi-delete</v-icon>
+                    </v-btn>
+            </template>
 
             <template v-slot:expanded-item="{ headers, item }">
               <td :colspan="headers.length" class="ma-0 pa-0">
                 <v-row class="ma-0 pa-0">
                   <v-col cols="1">
-                    <v-btn icon color="red" @click.stop="remove_item(item)">
+                    <!-- <v-btn icon color="red" @click.stop="remove_item(item)">
                       <v-icon>mdi-delete</v-icon>
-                    </v-btn>
+                    </v-btn> -->
                   </v-col>
                   <v-spacer></v-spacer>
                   <v-col cols="1">
@@ -539,6 +544,7 @@ export default {
         { text: 'UOM', value: 'uom', align: 'center' },
         { text: 'Rate', value: 'rate', align: 'center' },
         { text: 'Amount', value: 'amount', align: 'center' },
+        { text: 'Actions', value: "actions", align: 'center' },
       ],
     };
   },
