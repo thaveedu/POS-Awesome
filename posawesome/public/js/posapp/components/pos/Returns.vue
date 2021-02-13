@@ -10,7 +10,7 @@
           <span class="headline indigo--text">Select Return Invoice</span>
         </v-card-title>
           <v-container>
-            <v-row class="mb-4">
+            <v-row class="mb-4 ">
               <v-text-field
                 color="indigo"
                 label="Invoice ID"
@@ -19,6 +19,7 @@
                 v-model="invoice_name"
                 dense
                 clearable
+                class="mx-4"
               ></v-text-field>
               <v-btn
                 text
