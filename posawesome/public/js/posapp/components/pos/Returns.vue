@@ -42,6 +42,9 @@
                     show-select
                     v-model="selected"
                   >
+                  <template v-slot:item.grand_total="{ item }">{{
+                      formtCurrency(item.grand_total)
+                   }}</template>
                   </v-data-table>
                 </template>
               </v-col>
@@ -141,6 +144,10 @@ export default {
         evntBus.$emit("load_return_invoice", data);
         this.invoicesDialog = false;
       }
+    },
+    formtCurrency(value) {
+      value = parseFloat(value);
+      return value.toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,');
     },
   },
   created: function () {
