@@ -496,6 +496,19 @@
                 block
                 class="pa-0"
                 large
+                color="warning"
+                @click="search_price"
+                dark
+              >
+                Search Price
+              </v-btn
+              >
+            </v-col>
+            <v-col cols="12">
+              <v-btn
+                block
+                class="pa-0"
+                large
                 color="primary"
                 @click="show_payment"
                 dark
@@ -941,6 +954,9 @@ export default {
     },
     open_returns() {
       evntBus.$emit('open_returns', this.pos_profile.company);
+    },
+    search_price() {
+      evntBus.$emit('search_price');
     },
     close_payments() {
       evntBus.$emit('show_payment', 'false');
