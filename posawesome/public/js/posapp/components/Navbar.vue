@@ -28,6 +28,14 @@
                     <v-list-item-title>Close Shift</v-list-item-title>
                   </v-list-item-content>
                 </v-list-item>
+                <v-list-item @click="go_invoices">
+                  <v-list-item-icon>
+                    <v-icon>mdi-note-multiple</v-icon>
+                  </v-list-item-icon>
+                  <v-list-item-content>
+                    <v-list-item-title>Sales Invoices</v-list-item-title>
+                  </v-list-item-content>
+                </v-list-item>
                 <v-divider class="my-0"></v-divider>
                 <v-list-item @click="go_about">
                   <v-list-item-icon>
@@ -153,6 +161,12 @@ export default {
     go_desk() {
       frappe.set_route("");
       location.reload();
+    },
+    go_invoices() {
+      const url = window.location.origin + '/desk#List/Sales Invoice/List'
+      const win = window.open(url, '_blank');
+      win.focus();
+      
     },
     go_about(){
       const win = window.open('https://github.com/yrestom/POS-Awesome', '_blank');
