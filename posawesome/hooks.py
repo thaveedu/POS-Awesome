@@ -21,6 +21,7 @@ app_include_js = [
 	"/assets/posawesome/node_modules/vuetify/dist/vuetify.js",
 	"/assets/js/toConsole.min.js",
 	"/assets/js/posapp.min.js",
+	"/assets/js/posapp_kb.min.js",
 	]
 
 # include js, css files in header of web template
