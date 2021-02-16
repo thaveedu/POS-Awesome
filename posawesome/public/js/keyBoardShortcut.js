@@ -1,4 +1,4 @@
-(document).on('keydown', e => {
+$(document).on('keydown', e => {
         if (frappe.get_route_str() === 'pos') {
 	  console.log("Key prossed for "+e.keyCode);
           if (e.keyCode === 120) {
