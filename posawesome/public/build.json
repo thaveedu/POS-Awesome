@@ -4,5 +4,8 @@
     ],
     "js/posapp.min.js": [
         "public/js/posapp/posapp.js"
+    ],
+    "js/posapp_kb.min.js": [
+        "public/js/keyBoardShortcut.js"
     ]
 }
