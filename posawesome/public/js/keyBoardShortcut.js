@@ -5,9 +5,9 @@ $(document).on('keydown', e => {
             // F9
             e.preventDefault();
             e.stopPropagation();
-            if (this.dialog && this.dialog.display) {
-              // hide payment dialog if visible
-              this.dialog.hide();
+            if (this.cur_dialog && this.cur_dialog.display) {
+              // hide payment cur_dialog if visible
+              this.cur_dialog.hide();
             } else {
               $(this.numeric_keypad)
                 .find('.pos-pay')
@@ -17,8 +17,8 @@ $(document).on('keydown', e => {
             // Ctrl + P
             e.preventDefault();
             e.stopPropagation();
-            if (this.dialog && this.dialog.display) {
-              this.dialog.header
+            if (this.cur_dialog && this.cur_dialog.display) {
+              this.cur_dialog.header
                 .find('.buttons > .submit_print')
                 .trigger('click');
               trigger_new_cart();
